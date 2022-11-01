@@ -27,18 +27,27 @@ Below is an example of the fish class with the method feed and how to use it.
 """
 
 class Fish:
-  def __init__(self, name, age):
+  def __init__(self, name, age): # creating the class attributes
     self.name = name
     self.age = age
 
    # create a function how you normally would
    def feed(self): # <--- always put self (except for one case)
     """People normally put what a function does right here"""
-    print(f"You fed {self.name}") 
+    print(f"You fed {self.name}") # you can access the variable like that 
     
 fish = Fish("Frank", 3)
 fish.feed() # runs the function and prints: You fed Frank
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
-
+Instance variables are essentially constants of a class
+Example of them is below:
 """
+
+class Gravity:
+  rate = -9.8 # this can never change
+ 
+g = Gravity()
+r = g.rate # format: cls_instance.rate
+print(r) # prints -9.8
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------
